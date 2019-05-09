@@ -336,10 +336,10 @@ h1, h2, h3, h4, h5 {
   }
 
 	/*Begin CSS for services.html*/
-	.container-services {
+	/*.container-services {
 	width: 883px;
 	/* TB LR */
-	height: 2000px;
+	/*height: 2000px;
 	margin: 0 auto;
 	border: 0px solid red;
 	}
@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5 {
 	}
 		
 	/* header */
-	header {
+	/*header {
 	display: flex;
 	padding-bottom: 20px;
 	font-weight: bold;
@@ -455,7 +455,7 @@ h1, h2, h3, h4, h5 {
 	padding-right: 20px;
 		}*/
 
-	.bottom-content-services {
+	/*.bottom-content-services {
 	line-height: 1.25;
 	font-weight: bold;
 	margin-top: 40px;
@@ -482,9 +482,9 @@ h1, h2, h3, h4, h5 {
 	footer {
 	height: 100px;
 	background-image: linear-gradient(white, rgb(65, 95, 114), rgb(2, 30, 73));
-    }
+    }*/
     
-    /*Tablet*/
+    /*Tablet View*/
     
       @media(max-width: 800px) {
           .container {
@@ -492,12 +492,14 @@ h1, h2, h3, h4, h5 {
             margin: auto;
           }
     
-      .logo {
-          display: none;
-      }
       header {
           width: 100%;
           display: flex;
+          flex-direction: column-reverse;
+      }
+
+      .logo {
+          padding: 0px 40%;
       }
       
       header nav {
@@ -518,3 +520,58 @@ h1, h2, h3, h4, h5 {
       }
     }
 
+    /*Mobile View*/
+
+    @media(max-width: 500px) {
+        .container {
+            width: 450px;
+            margin: auto;
+        }
+
+        header {
+            width: 450px;
+            display: flex;
+        }
+
+        .logo {
+            padding: 0px 32%;
+        }
+
+        header nav {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;        }
+
+        header nav a {
+            width: 450px;
+            text-align: center;
+            padding: 15px 30%;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .cta .cta-text {
+            padding: 0px 15%;
+        }
+
+        .main-content .text-content {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+       .top-content {
+           display: flex;
+           flex-direction: column;
+       }
+
+       .middle-img {
+            width: 450px;
+        }
+
+       .bottom-content {
+            display: flex;
+            flex-direction: column;
+            padding: 0px -40px 0px 0px;
+       }
+    }
